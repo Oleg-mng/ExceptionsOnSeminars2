@@ -10,6 +10,9 @@ import java.util.Scanner;
 
 public class App1 {
     public static void main(String[] args) {
+        inputFloat();
+    }
+    public static void inputFloat(){
         Scanner in = new Scanner(System.in);
         System.out.println("Введите дробное число типа float (например: '1,7')");
 //        float k = in.nextFloat();
@@ -20,10 +23,9 @@ public class App1 {
             System.out.println("Вам удалось ввести валидное число типа float: " + k);
         } catch (InputMismatchException e) {
             System.out.println("Введите корректное дробное число типа float");
+            inputFloat();
         }
 
         in.close();
-
-
     }
 }
