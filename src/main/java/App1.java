@@ -14,7 +14,7 @@ public class App1 {
 //        float k = in.nextFloat();
 //        System.out.println("Вы ввели корректное дробное число:   " + k);
 
-        try {float k = in.nextFloat();;
+        try {float k = in.nextFloat();
         }
         catch (InputMismatchException e) {
             System.out.println("Введите корректное дробное число типа float");

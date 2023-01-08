@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 public class App3 {
     public static void main(String[] args) {
+        inputNumber();
         try {
             int a = 90;
             int b = 3;
@@ -17,8 +18,6 @@ public class App3 {
             printSum(23, 234);
             int[] abc = {1, 2};
             abc[3] = 9;
-            inputNumber();
-
 
         } catch (NullPointerException e) {
             System.out.println("Указатель не может указывать на null!");
@@ -37,9 +36,10 @@ public class App3 {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите число типа Int (не строку)");
         try {
-            int k = in.nextInt();
-            ;
-        } catch (InputMismatchException e) {
+            in.nextInt();
+        }
+        catch (InputMismatchException e)
+        {
             System.out.println("пустые строки вводить нельзя");
         }
         in.close();
