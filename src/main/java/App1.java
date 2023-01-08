@@ -1,4 +1,5 @@
 import java.util.InputMismatchException;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -10,23 +11,19 @@ import java.util.Scanner;
 public class App1 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите дробное число типа float (например: 1,7)");
+        System.out.println("Введите дробное число типа float (например: '1,7')");
 //        float k = in.nextFloat();
-//        System.out.println("Вы ввели корректное дробное число:   " + k);
 
-        try {float k = in.nextFloat();
-        }
-        catch (InputMismatchException e) {
+        float k = 0;
+        try {
+            k = in.nextFloat();
+            System.out.println("Вам удалось ввести валидное число типа float: " + k);
+        } catch (InputMismatchException e) {
             System.out.println("Введите корректное дробное число типа float");
         }
+
         in.close();
-//    }
-//    public void input {
-//        Scanner in = new Scanner(System.in);
-//        System.out.println("Введите дробное число типа float (например: 1,7)");
-//        float k = in.nextFloat();
-//        System.out.println("Вы ввели корректное дробное число:   " + k);
-//        in.close();
+
 
     }
 }

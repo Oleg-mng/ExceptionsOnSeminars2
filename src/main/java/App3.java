@@ -1,4 +1,4 @@
-import java.util.InputMismatchException;
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -11,6 +11,10 @@ import java.util.Scanner;
 public class App3 {
     public static void main(String[] args) {
         inputNumber();
+        checkSomeParts();
+    }
+
+    public static void checkSomeParts(){
         try {
             int a = 90;
             int b = 3;
@@ -34,13 +38,13 @@ public class App3 {
 
     public static void inputNumber() {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите число типа Int (не строку)");
-        try {
-            in.nextInt();
-        }
-        catch (InputMismatchException e)
-        {
+        System.out.println("Введите строковые данные (без пустых значений)");
+        String s = in.nextLine();
+        if (Objects.equals(s, "") || Objects.equals(s, " ") || Objects.equals(s, "  ")) {
             System.out.println("пустые строки вводить нельзя");
+        }
+        else {
+            System.out.println("Вы смогли ввести валидные данные, они сохранены в db:   " + s);
         }
         in.close();
     }
